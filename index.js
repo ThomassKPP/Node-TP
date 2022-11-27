@@ -24,7 +24,7 @@ app.get('/tp2', (req, res) => {
                     const transfertSiege = results.filter(result => result.transfertSiege == 'true')
                     const percentage = transfertSiege.length / results.length * 100
                     let x = percentage.toFixed(2)
-                    res.send(`${x}% des compagnies ont transféré leur siège social depuis le 1er Novembre 2022`)
+                    res.send(`${x}% des compagnies ont transféré leur siège social avant le 1er Novembre 2022`)
                 } )
             } else {
                 entry.autodrain();
