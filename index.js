@@ -10,8 +10,6 @@ app.get('/tp2', (req, res) => {
     const results = [];
     const download = require('download');
     
-    // Download the file from the URL then unzip it and calculate the percentage of companies that have moved their head office
-    // since November 1st 2022
     download('https://files.data.gouv.fr/insee-sirene/StockEtablissementLiensSuccession_utf8.zip', 'data').then(() => {
         fs.createReadStream('data/StockEtablissementLiensSuccession_utf8.zip')
         .pipe(unzip.Parse())
