@@ -30,7 +30,7 @@ app.get('/tp2', (req, res) => {
                 entry.autodrain();
             }
         });
-})
+    })
 })
 
 app.listen(port, () => console.log(`TP Node est en marche sur ${port}!`))
